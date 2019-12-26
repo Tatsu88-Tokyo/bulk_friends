@@ -1,0 +1,20 @@
+<div class="main users-edit">
+  <div class="container">
+    <div class="form-heading">アカウント編集</div>
+    <a class="btn" data-method="delete" href="/users/sign_out">ログアウト</a>
+    <div class="form users-form">
+      <div class="form-body">
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        <%= form_with(method: :patch, url:"/users/#{@user.id}", local:true) do |form| %>
+          <p>ユーザー名</p>
+          <input name="name" value="<%= @user.name %>">
+          <p>メールアドレス</p>
+          <input name="email" value="<%= @user.email %>">
+          <input type="submit" value="保存">
+        <% end %>
+      </div>
+    </div>

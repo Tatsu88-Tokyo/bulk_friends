@@ -1,0 +1,33 @@
+@import "valiables";
+
+/* 共通レイアウト ================================ */
+body {
+  color: #2d3133;
+  background-color: $home;
+  margin: 0;
+  min-height: 1vh;
+}
+
+.main {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #f5f8fa;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+  .btn{
+    background-color:$home;
+    color:$top;
+    margin: 20px 0;
+  }
+}
+
+
